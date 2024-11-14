@@ -1,12 +1,20 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let who = ["Juan", "Mi tito", "Mi amigo", "Pedro"];
+let action = ["jugo", "quito", "perdió", "corrió"];
+let what = ["mi tarea", "las sillas", "el pendiente"];
+let when = ["hoy", "ayer", "el jueves", "hace medio año", "hace dos días"];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function excuseGenerator(who, action, what, when) {
+  let whoIndex = Math.floor(Math.random() * who.length);
+  let actionIndex = Math.floor(Math.random() * action.length);
+  let whatIndex = Math.floor(Math.random() * what.length);
+  let whenIndex = Math.floor(Math.random() * when.length);
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-  console.log("Hola Spain 91");
-};
+  return (who[whoIndex] +  " " + action[actionIndex] + " " + what[whatIndex] + " " + when[whenIndex]);
+}
+
+function onLoad() {
+  let excuse = document.getElementById("excuse");
+  excuse.innerHTML = excuseGenerator(who, action, what, when);
+}
+
+window.onload = onLoad;

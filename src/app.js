@@ -4,12 +4,12 @@ let what = ["mi tarea", "las sillas", "el pendiente"];
 let when = ["hoy", "ayer", "el jueves", "hace medio año", "hace dos días"];
 
 function excuseGenerator(who, action, what, when) {
-  let whoIndex = Math.floor(Math.random() * who.length);
-  let actionIndex = Math.floor(Math.random() * action.length);
-  let whatIndex = Math.floor(Math.random() * what.length);
-  let whenIndex = Math.floor(Math.random() * when.length);
+  let whoRandomIndex = Math.floor(Math.random() * who.length);
+  let actionRandomIndex = Math.floor(Math.random() * action.length);
+  let whatRandomIndex = Math.floor(Math.random() * what.length);
+  let whenRandomIndex = Math.floor(Math.random() * when.length);
 
-  return (who[whoIndex] +  " " + action[actionIndex] + " " + what[whatIndex] + " " + when[whenIndex]);
+  return(`${who[whoRandomIndex]} ${action[actionRandomIndex]} ${what[whatRandomIndex]} ${when[whenRandomIndex]}`);
 }
 
 function onLoad() {
